@@ -7,11 +7,9 @@ import { Product } from "@/types";
 import IconButton from "@/components/ui/IconButton";
 import Currency from "@/components/ui/Currency";
 
-interface CartItemProps {
-  data: Product;
-}
 
-const CartItem: React.FC<CartItemProps> = ({ data }) => {
+
+const CartItem = ({ data }) => {
   const cart = useCart();
 
   const onRemove = () => {
