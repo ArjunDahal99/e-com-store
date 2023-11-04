@@ -6,13 +6,10 @@ import Button from "./ui/Button";
 import { ShoppingCart } from "lucide-react";
 import useCart from "@/hooks/use-cart";
 
-interface InfoProps {
-  data: Product;
-}
 
-const Info: React.FC<InfoProps> = ({ data }) => {
+const Info = ({ data }) => {
   const cart = useCart();
-  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+  const onAddToCart = (event) => {
     event.stopPropagation();
     cart.addItem(data);
   };

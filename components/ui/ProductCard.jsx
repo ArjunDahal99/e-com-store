@@ -10,16 +10,16 @@ import PreviewModal from "../preview-modal";
 import usePreviewModal from "@/hooks/use-preview";
 import useCart from "@/hooks/use-cart";
 
-const ProductCard = ({ data }: { data: any }) => {
+const ProductCard = ({ data }) => {
   const router = useRouter();
   const previewModal = usePreviewModal();
   const cart = useCart();
 
-  const onPreview: MouseEventHandler<HTMLButtonElement> = (event) => {
+  const onPreview = (event) => {
     event.stopPropagation();
     previewModal.onOpen(data);
   };
-  const onAddToCart: MouseEventHandler<HTMLButtonElement> = (event) => {
+  const onAddToCart= (event) => {
     event.stopPropagation();
     cart.addItem(data);
   };
