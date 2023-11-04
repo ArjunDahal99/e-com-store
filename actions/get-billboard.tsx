@@ -1,4 +1,5 @@
 import { Billboard } from "@/types";
+import axios from "axios";
 
 const URL = `${process.env.NEXT_PUBLIC_API_URL}`;
 const getBillboard = async (id: string): Promise<Billboard> => {
